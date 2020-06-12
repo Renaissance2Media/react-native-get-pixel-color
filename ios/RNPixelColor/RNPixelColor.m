@@ -58,8 +58,9 @@ RCT_EXPORT_METHOD(getRGB:(NSInteger)x andY:(NSInteger)y callback:(RCTResponseSen
     int red   = self.rawData[byteIndex];
     int green = self.rawData[byteIndex + 1];
     int blue  = self.rawData[byteIndex + 2];
+    int alpha = self.rawData[byteIndex + 3];
 
-    NSArray *color = @[@(red), @(green), @(blue)];
+    NSArray *color = @[@(red), @(green), @(blue), @(alpha)];
 
     callback(@[[NSNull null], color]);
 }
